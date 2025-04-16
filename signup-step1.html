@@ -10,20 +10,32 @@
   <div class="login-card">
     <h1>Create Account</h1>
     <p class="subtitle">Step 1 of 2</p>
-    <form action="signup-step2.html">
-      <input type="text" placeholder="First Name" required >
-      <input type="text" placeholder="Last Name" required >
-      <input type="text" placeholder="Date of Birth (DD/MM/YYYY)" required >
-      <input type="tel" placeholder="Mobile Number" required >
-      <input type="email" placeholder="Email" required >
-      <input type="text" name="accessCode" placeholder="Access Code" required>
-
-        <p class="forgot-link">
-          <a href="access-code-info.html">What’s this?</a>
-        </p>
-
+    <form onsubmit="goToStep2(event)">
+      <input type="text" id="firstName" placeholder="First Name" required>
+      <input type="text" id="lastName" placeholder="Last Name" required>
+      <input type="text" id="dob" placeholder="Date of Birth (DD/MM/YYYY)" required>
+      <input type="tel" id="phone" placeholder="Mobile Number" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="text" id="accessCode" placeholder="Access Code" required>
+      <p class="forgot-link"><a href="access-code-info.html">What’s this?</a></p>
       <button type="submit">Next</button>
     </form>
+    <script>
+      function goToStep2(e) {
+        e.preventDefault();
+    
+        const params = new URLSearchParams({
+          firstName: document.getElementById('firstName').value,
+          lastName: document.getElementById('lastName').value,
+          dob: document.getElementById('dob').value,
+          phone: document.getElementById('phone').value,
+          email: document.getElementById('email').value,
+          accessCode: document.getElementById('accessCode').value
+        });
+    
+        window.location.href = `signup-step2.html?${params.toString()}`;
+      }
+    </script>
   </div>
 </body>
 </html>
