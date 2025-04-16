@@ -11,12 +11,22 @@
     <h1>Create Username &amp; Password</h1>
     <p class="subtitle">Step 2 of 2</p>
     <form id="signup-form">
-      <input type="text" id="username" placeholder="Create Username" required >
-      <input type="password" id="password" placeholder="Create Password" required >
-      <input type="password" id="confirm-password" placeholder="Confirm Password" required >
+      <input type="text" id="firstName" placeholder="First Name" required>
+      <input type="text" id="lastName" placeholder="Last Name" required>
+      <input type="text" id="dob" placeholder="Date of Birth (DD/MM/YYYY)" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <input type="text" id="accessCode" placeholder="Access Code" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Create Password" required>
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
       <button type="submit">Sign Up</button>
     </form>
     <p class="register-text">Already have an account? <a href="login.html">Login</a></p>
   </div>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script defer src="signup.js"></script>
 </body>
 </html>
