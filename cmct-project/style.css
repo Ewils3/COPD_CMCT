@@ -1,0 +1,232 @@
+/*splash screen*/
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f7faff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .center {
+    text-align: center;
+    transform: scale(1.3);
+  }
+  
+  .logo {
+    width: 200px;
+    margin-bottom: 10px; /* reduced from 30px */
+  }
+  
+  .splash-screen h1 {
+    font-size: 64px;
+    color: #7a83f0;
+    margin: 5px 0; /* reduced vertical space */
+  }
+  
+  .splash-screen p {
+    font-size: 24px;
+    color: #999;
+    margin: 5px 0; /* reduced vertical space */
+  }
+  
+  /*login page*/
+  /* Fullscreen blue background */
+.login-screen {
+    background-color: #a3b9f9;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* White card container */
+  .lo/* Reset for full viewport coverage */
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  /* Blue screen fills entire page */
+  .login-screen {
+    background-color: #a3b9f9;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Centered white card */
+  .login-card {
+    background-color: white;
+    border-radius: 28px;
+    padding: 80px 60px; /* bigger card */
+    width: 100%;
+    max-width: 500px;   /* wider card */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Header */
+  .login-card h1 {
+    font-size: 40px;  /* increased from 32px */
+    margin-bottom: 10px;
+    color: #000;
+  }
+  
+  
+  .login-card .subtitle {
+    font-size: 20px;  /* increased from 16px */
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  /* Inputs */
+  .login-card input {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 12px;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  }
+  
+  /* Links and Button */
+  .forgot-link {
+    display: block;
+    font-size: 14px;
+    color: #000;
+    text-align: left;
+    margin-bottom: 30px;
+    text-decoration: none;
+  }
+  
+  .login-card button {
+    width: 100%;
+    padding: 16px;
+    background-color: #9b8cfb;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-card button:hover {
+    background-color: #816cf5;
+  }
+  
+  .register-text {
+    margin-top: 30px;
+    font-size: 16px; /* increased slightly */
+  }
+  
+  .register-text a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+  }
+  gin-card {
+    background-color: white;
+    border-radius: 28px;
+    padding: 60px 40px;
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Header text */
+  .login-card h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+    color: #000;
+  }
+  
+  .login-card .subtitle {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  /* Input fields */
+  .login-card input {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 12px;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  }
+  
+ /* Container styling for spacing and alignment */
+.forgot-link {
+    text-align: left;
+    font-size: 14px;
+    margin: 5px 0 30px;
+  }
+  
+  /* Actual link styling */
+  .forgot-link a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .forgot-link a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* Continue button */
+  .login-card button {
+    width: 100%;
+    padding: 16px;
+    background-color: #9b8cfb;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-card button:hover {
+    background-color: #816cf5;
+  }
+  
+  /* Register text */
+  .register-text {
+    margin-top: 25px;
+    font-size: 14px;
+  }
+  
+  .register-text a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+  }
+  
+  /*what's this? page*/
+  .info-text {
+    font-size: 16px;
+    text-align: left;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+  
+  .info-text .contact {
+    margin-top: 30px;
+  }
+  

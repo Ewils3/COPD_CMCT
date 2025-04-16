@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - CMCT</title>
+  <link rel="stylesheet" href="style.css" >
+ <!-- Firebase v9 compat libraries (no import/export needed) -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script defer src="login.js"></script>
+
+</head>
+<body class="login-screen">
+    <div class="login-card">
+      <h1>Login</h1>
+      <p class="subtitle">to get started</p>
+      <form id="login-form">
+        <input type="email" id="login-email" placeholder="email@email.com" required >
+        <input type="password" id="login-password" placeholder="Password" required >
+        <a href="forgot.html" class="forgot-link">Forgot Password?</a>
+        <button type="submit">Continue</button>
+      </form>
+      <p class="register-text">New User? <a href="signup-step1.html">Register</a></p>
+    </div>
+  </body>
+  </html>
