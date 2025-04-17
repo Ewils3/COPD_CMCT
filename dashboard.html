@@ -1,16 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" >
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CMCT Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dashboard.css">
 </head>
-<body class="login-screen">
-  <div class="login-card">
-    <h1>Welcome to Your Dashboard</h1>
-    <p class="subtitle">You’ve successfully logged in 🎉</p>
-    <button type="button" onclick="window.location.href='login.html'">Log Out</button>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header styled-box">
+        <img src="images/cmct_logo.png" alt="CMCT Logo" class="logo">
+        <div class="header-text">
+          <h2 class="logo-title">CMCT</h2>
+          <span class="subtitle">Breath Better Today</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><img src="images/dashboard_icon.png" alt="Dashboard">Dashboard</li>
+          <li><img src="images/daily_assessment_icon.png" alt="Assessment">Daily Assessment</li>
+          <li><img src="images/progress_reports_icon.png" alt="Reports">Progress Reports</li>
+          <li><img src="images/treatment_plan_icon.png" alt="Plan">Treatment Plan</li>
+          <li><img src="images/alerts_&_notifications_icon.png" alt="Alerts">Alerts &amp; Notifications</li>
+          <li><img src="images/contact_doctor_icon.png" alt="Doctor">Contact Doctor</li>
+          <li><img src="images/video_bank_icon.png" alt="Video">Video Bank</li>
+          <li><img src="images/update_profile_icon.png" alt="Profile">Update Profile</li>
+          <li><img src="images/download_reports_icon.png" alt="Download">Download Reports</li>
+          <li><img src="images/help_&_support_icon.png" alt="Help">Help &amp; Support</li>
+          <li><img src="images/settings_icon.png" alt="Settings">Settings</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="main-header">
+        <h1>Hello, <span class="name-highlight">Kate Smith</span></h1>
+        <div class="user-info">
+          <img src="images/bell_icon.png" alt="Notifications" class="icon">
+          <div class="user-avatar">
+            <span class="user-name">Kate Smith</span>
+            <img src="images/cmct_user.jpg" alt="User Avatar">
+          </div>
+        </div>
+      </header>
+
+      <section class="dashboard-summary">
+        <h2>Your CMCT Dashboard</h2>
+        <div class="score-chart">
+          <h3>Top Scores</h3>
+          <img src="images/example_graph.png" alt="Score Chart">
+        </div>
+      </section>
+
+      <section class="dashboard-actions">
+        <div class="action-box green">
+          <p><strong>1.</strong> Daily Check-In</p>
+          <img src="images/checkmark.png" alt="Check">
+        </div>
+        <div class="action-box purple">
+          <p><strong>2.</strong> Recommended Exercises</p>
+          <img src="images/checkmark.png" alt="Check">
+        </div>
+        <div class="action-box blue">
+          <p><strong>3.</strong> Coaching Game</p>
+          <img src="images/checkmark.png" alt="Check">
+        </div>
+        <div class="action-box teal">
+          <p><strong>4.</strong> Complete Daily Assessment</p>
+          <img src="images/checkmark.png" alt="Check">
+        </div>
+      </section>
+    </main>
   </div>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script defer src="dashboard.js"></script>
 </body>
 </html>
