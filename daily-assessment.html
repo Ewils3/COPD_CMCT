@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Assessment</title>
+  <link rel="stylesheet" href="daily-assessment.css" >
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script defer src="daily-assessment.js"></script>
+</head>
+<body>
+  <div class="assessment-container">
+    <header>
+      <h1>Daily Assessment</h1>
+      <h2 id="month-label">April</h2>
+      <div id="week-calendar" class="calendar-row">
+        <!-- JavaScript will populate this -->
+      </div>
+    </header>
+
+    <form id="assessment-form">
+      <h3>How often do you experience the following symptoms?</h3>
+      <p class="scale-label">1 (Never) &nbsp;&nbsp; 3 (Sometimes) &nbsp;&nbsp; 5 (Always)</p>
+
+      <div class="question-group">
+        <label>Wheezing</label>
+        <input type="range" min="1" max="5" step="1" name="wheezing" >
+      </div>
+
+      <div class="question-group">
+        <label>Shortness of breath</label>
+        <input type="range" min="1" max="5" step="1" name="breath">
+      </div>
+
+      <div class="question-group">
+        <label>Chest tightness</label>
+        <input type="range" min="1" max="5" step="1" name="chestTightness" >
+      </div>
+
+      <div class="question-group">
+        <label>Swelling in legs or ankles</label>
+        <input type="range" min="1" max="5" step="1" name="legSwelling" >
+      </div>
+
+      <div class="question-group">
+        <label>Trouble sleeping due to breathing</label>
+        <input type="range" min="1" max="5" step="1" name="sleepTrouble" >
+      </div>
+
+      <h3>How would you rate your breathing effort?</h3>
+      <p class="scale-label">1 (Very Light) &nbsp;&nbsp; 3 (Moderate) &nbsp;&nbsp; 5 (Extremely Hard)</p>
+
+      <div class="question-group">
+        <label>At rest (e.g., lying in bed)</label>
+        <input type="range" min="1" max="5" step="1" name="rest" >
+      </div>
+
+      <div class="question-group">
+        <label>During activity (e.g., walking, chores)</label>
+        <input type="range" min="1" max="5" step="1" name="activity" >
+      </div>
+
+      <button type="submit">Submit Assessment</button>
+    </form>
+
+    <div id="confirmation" class="hidden">
+      <h3>✅ Assessment submitted!</h3>
+      <p>You’ll be redirected to the dashboard shortly.</p>
+    </div>
+  </div>
+  <!-- Popup modal for past entries -->
+  <div id="view-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Past Assessment</h3>
+      <div id="modal-body"></div>
+      <button id="close-modal-btn" type="button">Close</button>
+    </div>
+  </div>
+</body>
+</html>
