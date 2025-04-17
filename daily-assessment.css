@@ -1,178 +1,177 @@
 body {
-    font-family: 'Helvetica Neue', sans-serif;
-    background-color: #f5f9ff;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .assessment-container {
-    max-width: 700px;
-    margin: 40px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-  
-  header h1 {
-    text-align: center;
-    color: #333;
-  }
-  
-  header h2 {
-    text-align: center;
-    color: #7a83f0;
-    margin-bottom: 20px;
-  }
-  
-  .calendar-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 30px;
-    padding: 0 10px;
-  }
-  
-  .calendar-day {
-    background-color: #b4d9f7;
-    padding: 12px;
-    width: 40px;
-    height: 60px;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: bold;
-    position: relative;
-    cursor: pointer;
-  }
-  
-  .calendar-day.today {
-    outline: 3px solid #7a83f0;
-  }
-  
-  .calendar-day .star {
-    font-size: 20px;
-    display: block;
-    margin-top: 4px;
-  }
-  
-  form h3 {
-    margin-top: 30px;
-    font-size: 20px;
-    color: #444;
-  }
-  
-  .scale-label {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 10px;
-  }
-  
-  .question-group {
-    margin-bottom: 20px;
-  }
-  
-  .question-group label {
-    display: block;
-    font-weight: 500;
-    margin-bottom: 5px;
-  }
-  
-  input[type="range"] {
-    width: 100%;
-  }
-  
-  button[type="submit"] {
-    background-color: #7a83f0;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
-    display: block;
-    width: 100%;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #616cf5;
-  }
-  
-  #confirmation {
-    text-align: center;
-    margin-top: 40px;
-    color: #4caf50;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  .slider-labels {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    padding: 2px 4px 8px 4px;
-    color: #555;
-  }
-  .calendar-day {
-    background-color: #e3ebff;
-    padding: 10px;
-    width: 40px;
-    height: 60px;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 16px;
-    position: relative;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-  
-  .calendar-day.today {
-    outline: 3px solid #7a83f0;
-  }
-  
-  .calendar-day .star {
-    font-size: 20px;
-    margin-top: 5px;
-    color: #ffc107;
-  }
-  
-  .modal {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-  }
-  
-  .modal-content {
-    background: white;
-    padding: 20px 30px;
-    border-radius: 10px;
-    max-width: 400px;
-    width: 90%;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-  
-  .modal-content h3 {
-    margin-top: 0;
-  }
-  
-  .modal-content button {
-    margin-top: 20px;
-    padding: 8px 16px;
-    background-color: #7a83f0;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #f5f9ff;
+  margin: 0;
+  padding: 0;
+}
+
+.assessment-container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  text-align: center;
+  color: #333;
+}
+
+header h2 {
+  text-align: center;
+  color: #7a83f0;
+  margin-bottom: 20px;
+}
+
+.calendar-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.calendar-day {
+  background-color: #b4d9f7;
+  padding: 12px;
+  width: 40px;
+  height: 60px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+}
+
+.calendar-day.today {
+  outline: 3px solid #7a83f0;
+}
+
+.calendar-day .star {
+  font-size: 20px;
+  display: block;
+  margin-top: 4px;
+}
+
+form h3 {
+  margin-top: 30px;
+  font-size: 20px;
+  color: #444;
+}
+
+.scale-label {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.question-group {
+  margin-bottom: 20px;
+}
+
+.question-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+button[type="submit"] {
+  background-color: #7a83f0;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #616cf5;
+}
+
+#confirmation {
+  text-align: center;
+  margin-top: 40px;
+  color: #4caf50;
+}
+
+.hidden {
+  display: none;
+}
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 2px 4px 8px 4px;
+  color: #555;
+}
+.calendar-day {
+  background-color: #e3ebff;
+  padding: 10px;
+  width: 40px;
+  height: 60px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-day.today {
+  outline: 3px solid #7a83f0;
+}
+
+.calendar-day .star {
+  font-size: 20px;
+  margin-top: 5px;
+  color: #ffc107;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 8px 16px;
+  background-color: #7a83f0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

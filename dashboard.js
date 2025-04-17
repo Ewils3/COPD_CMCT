@@ -23,6 +23,26 @@ auth.onAuthStateChanged(async (user) => {
   const today = formatDate(new Date());
 
   try {
+    // Fetch user's first and last name from Firestore
+    const userDoc = await db.collection("users").doc(uid).get();
+    if (userDoc.exists) {
+      const userData = userDoc.data();
+      const fullName = `${userData.firstName} ${userData.lastName}`;
+
+      // Update dashboard header
+      const nameHighlight = document.querySelector(".name-highlight");
+      if (nameHighlight) {
+        nameHighlight.textContent = fullName;
+      }
+
+      // Update sidebar user info
+      const userName = document.querySelector(".user-name");
+      if (userName) {
+        userName.textContent = fullName;
+      }
+    }
+
+    // Check if today's assessment is completed
     const doc = await db.collection("users").doc(uid)
       .collection("assessments").doc(today).get();
 
@@ -30,12 +50,12 @@ auth.onAuthStateChanged(async (user) => {
       const checkContainer = document.querySelector("#assessment-box .checkbox-container");
       if (checkContainer) {
         const checkmark = document.createElement("img");
-        checkmark.src = "images/checkmark.png"; // make sure this is your actual checkmark image path
+        checkmark.src = "images/checkmark.png"; // your checkmark image path
         checkmark.alt = "Completed";
         checkContainer.appendChild(checkmark);
       }
     }
   } catch (err) {
-    console.error("Failed to load task status:", err);
+    console.error("Failed to load dashboard info:", err);
   }
 });
