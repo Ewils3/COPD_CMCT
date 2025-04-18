@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Fitness Library</title>
+  <link rel="stylesheet" href="recommended-exercises.css">
+</head>
+<body>
+
+  <!-- Header OUTSIDE the centered container -->
+  <div class="header">
+    <img src="images/Skipping.png" alt="Skipping" class="header-left-img">
+    <div class="header-title">My Fitness Library</div>
+    <img src="images/Yoga.png" alt="Yoga" class="header-right-img">
+  </div>
+
+  <!-- Centered content starts -->
+  <div class="fitness-library">
+    <!-- Dates -->
+    <div class="date-selector">
+      <div class="date active">
+        <div class="day">18</div>
+        <div class="weekday">Tue</div>
+      </div>
+      <div class="date">
+        <div class="day">19</div>
+        <div class="weekday">Wed</div>
+      </div>
+      <div class="date">
+        <div class="day">20</div>
+        <div class="weekday">Thu</div>
+      </div>
+      <div class="date">
+        <div class="day">21</div>
+        <div class="weekday">Fri</div>
+      </div>
+      <div class="date">
+        <div class="day">22</div>
+        <div class="weekday">Sat</div>
+      </div>
+    </div>
+
+    <!-- Recommended Exercises Title -->
+    <div class="recommended-title-container">
+      <div class="recommended-title">
+        Recommended Exercises
+      </div>
+    </div>
+
+    <!-- Exercises Carousel -->
+    <div class="exercise-carousel">
+        <div class="arrow-container">
+          <button type="button" class="carousel-btn left-btn">&#8592;</button>
+        </div>
+        <div class="exercise-cards">
+          <div class="exercise-card">
+            <iframe 
+              class="exercise-video"
+              src="https://www.youtube.com/embed/iP1q8EM8IOw"
+              title="Focused Breathing Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+            <div class="exercise-name">Full Body Workout</div>
+            <div class="exercise-time">03:51 min</div>
+        </div>
+        <div class="exercise-card">
+            <iframe 
+              class="exercise-video"
+              src="https://www.youtube.com/embed/Vizf195JPoE"
+              title="Focused Breathing Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+            <div class="exercise-name">Clear Lung Airways and Mucus</div>
+            <div class="exercise-time">02:38 min</div>
+          </div>
+          <div class="exercise-card">
+            <iframe 
+              class="exercise-video"
+              src="https://www.youtube.com/embed/ZJPJjZRHmy8"
+              title="Gentle Yoga Flow Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+            <div class="exercise-name">Breathing Techniques</div>
+            <div class="exercise-time">11:21 min</div>
+          </div>
+        </div>
+        <div class="arrow-container">
+          <button type="button" class="carousel-btn right-btn">&#8594;</button>
+        </div>
+      </div>
+    <!-- See All Exercises Button -->
+    <div class="see-all-btn-container">
+      <button type="button" class="see-all-btn">
+        See All Exercises
+        <span class="arrow-circle">➔</span>
+      </button>
+    </div>
+
+
+    <!-- Return to Dashboard Button -->
+<div class="return-btn-container">
+    <a href="dashboard.html" class="return-btn">
+      ← Return to Dashboard
+    </a>
+  </div>
+
+  <script src="recommended-exercises.js" defer></script>
+</body>
+</html>
