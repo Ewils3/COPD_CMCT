@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coaching Game</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="coaching-game.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header styled-box">
+        <img src="images/cmct_logo.png" alt="CMCT Logo" class="logo">
+        <div class="header-text">
+          <h2 class="logo-title">CMCT</h2>
+          <span class="subtitle">Breath Better Today</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="dashboard.html" class="sidebar-link"><img src="images/dashboard_icon.png" alt="Dashboard"><span>Dashboard</span></a></li>
+          <li><a href="https://docs.google.com/document/d/1qMOezB3ehmOUOmkBlxzM1jPHdHD9vChG8jN9sWESzVE/edit?usp=sharing" target="_blank" class="sidebar-link"><img src="images/laptop-circle.png" alt="User Manual"><span>User Manual</span></a></li>
+          <!-- add other links if needed -->
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="main-header">
+        <h1>Coaching Game</h1>
+      </header>
+
+      <section class="dashboard-summary">
+        <div class="iframe-container">
+          <iframe 
+            src="https://bduhart.github.io/CMCT2-tests/" 
+            title="CMCT Coaching Game">
+          </iframe>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script defer src="dashboard.js"></script>
+</body>
+</html>
