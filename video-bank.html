@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Bank</title>
+  <link rel="stylesheet" href="video-bank.css">
+</head>
+<body>
+
+  <!-- Header OUTSIDE the centered container -->
+  <div class="header">
+    <img src="images/Skipping.png" alt="Skipping" class="header-left-img">
+    <div class="header-title">Your Video Bank</div>
+    <img src="images/Yoga.png" alt="Yoga" class="header-right-img">
+  </div>
+
+  <!-- Centered content starts -->
+  <div class="fitness-library">
+
+    <!-- Recommended Title -->
+    <div class="recommended-title-container">
+      <div class="recommended-title">
+        Personalized Recommendations
+      </div>
+    </div>
+
+    <!-- Video List -->
+    <div id="video-list" class="exercise-carousel">
+      <!-- JavaScript will inject video cards here -->
+    </div>
+
+    <!-- Return to Dashboard Button -->
+    <div class="return-btn-container">
+      <a href="dashboard.html" class="return-btn">
+        ← Return to Dashboard
+      </a>
+    </div>
+
+  </div>
+
+  <script src="video-bank.js" defer></script>
+</body>
+</html>
