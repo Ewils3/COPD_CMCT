@@ -11,7 +11,7 @@
   <!-- Header OUTSIDE the centered container -->
   <div class="header">
     <img src="images/Skipping.png" alt="Skipping" class="header-left-img">
-    <div class="header-title">Your Video Bank</div>
+    <div class="header-title">Video Exercises</div>
     <img src="images/Yoga.png" alt="Yoga" class="header-right-img">
   </div>
 
@@ -30,6 +30,12 @@
       <!-- JavaScript will inject video cards here -->
     </div>
 
+    <!-- Complete Recommended Exercises Button -->
+<div class="complete-exercises-btn-container">
+    <button id="complete-exercises-btn" type="button">
+      Complete Recommended Exercises
+    </button>
+  </div>
     <!-- Return to Dashboard Button -->
     <div class="return-btn-container">
       <a href="dashboard.html" class="return-btn">
@@ -39,6 +45,10 @@
 
   </div>
 
+  <!-- Firebase Scripts -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <script src="video-bank.js" defer></script>
 </body>
 </html>

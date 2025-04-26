@@ -1,14 +1,14 @@
-// video-bank.js
+// 📦 video-bank.js
 
-// Simulated user respiratory metrics (replace with Firebase later)
+// Simulated user respiratory metrics (later replace with real Firebase data)
 const userMetrics = {
-    respiratoryRate: 22,  // example: 22 bpm
-    FVC: 2.8,             // liters
-    FEV1: 2.2,            // liters
-    fev1FvcRatio: 0.65    // ratio
+    respiratoryRate: 22,
+    FVC: 2.8,
+    FEV1: 2.2,
+    fev1FvcRatio: 0.65
   };
   
-  // Map conditions to video links
+  // Mapping conditions to videos
   const videoRecommendations = {
     respiratoryRate: [
       { min: 21, max: 35, videos: [
@@ -39,7 +39,28 @@ const userMetrics = {
     ]
   };
   
-  // Function to generate the video list
+  // 📦 Initialize Firebase
+  if (!firebase.apps.length) {
+    const firebaseConfig = {
+      apiKey: "AIzaSyAC799b0bQP2QOn37g0Fjq_Lejwwb-MwY8",
+      authDomain: "cmct-coaching-tool.firebaseapp.com",
+      projectId: "cmct-coaching-tool",
+      storageBucket: "cmct-coaching-tool.firebasestorage.app",
+      messagingSenderId: "427203091725",
+      appId: "1:427203091725:web:6a9d07b27a456d8d4d2444"
+    };
+    firebase.initializeApp(firebaseConfig);
+  }
+  
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  
+  // Helper: Format date as YYYY-MM-DD
+  function formatDate(date) {
+    return date.toISOString().split("T")[0];
+  }
+  
+  // 📦 Display videos
   function displayVideos() {
     const videoList = document.getElementById("video-list");
   
@@ -62,7 +83,7 @@ const userMetrics = {
     }
   }
   
-  // Helper function to generate video sections
+  // 📦 Create each video section
   function generateSection(title, value, conditions) {
     const section = document.createElement("div");
     section.className = "video-section";
@@ -90,18 +111,21 @@ const userMetrics = {
       matchedVideos.forEach(video => {
         const videoTitle = document.createElement("p");
         videoTitle.textContent = video.title;
+        videoTitle.style.fontWeight = "bold";
+        videoTitle.style.textAlign = "center";
+        videoTitle.style.marginTop = "10px";
         section.appendChild(videoTitle);
   
         const iframe = document.createElement("iframe");
-        
-        // FIX: Properly format YouTube embed URL
+  
+        // Format URL correctly for embed
         let embedUrl = video.url;
         if (embedUrl.includes("youtu.be")) {
           embedUrl = embedUrl.replace("https://youtu.be/", "https://www.youtube.com/embed/");
         } else if (embedUrl.includes("watch?v=")) {
           embedUrl = embedUrl.replace("watch?v=", "embed/");
         }
-        
+  
         iframe.src = embedUrl;
         iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
         iframe.allowFullscreen = true;
@@ -116,7 +140,40 @@ const userMetrics = {
     return section;
   }
   
+  // 📦 Complete Recommended Exercises Button
+  document.getElementById("complete-exercises-btn").addEventListener("click", async () => {
+    const user = auth.currentUser;
+    if (!user) {
+      alert("Please login first.");
+      return;
+    }
   
-  // Run display on page load
+    const uid = user.uid;
+    const today = formatDate(new Date());
+  
+    try {
+      await db.collection("users").doc(uid)
+        .collection("exerciseCompletions").doc(today)
+        .set({
+          completed: true,
+          timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        });
+  
+      // ✅ Only disable the button and show a confirmation
+      const completeBtn = document.getElementById("complete-exercises-btn");
+      completeBtn.disabled = true;
+      completeBtn.textContent = "✅ Exercises Completed! Redirecting...";
+      completeBtn.style.backgroundColor = "green";
+  
+      setTimeout(() => {
+        window.location.href = "dashboard.html";
+      }, 2000);
+    } catch (error) {
+      console.error("Error completing exercises:", error);
+      alert("Something went wrong. Please try again.");
+    }
+  });
+  
+  // 📦 Run display function on page load
   window.onload = displayVideos;
   

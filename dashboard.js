@@ -55,6 +55,21 @@ auth.onAuthStateChanged(async (user) => {
         checkContainer.appendChild(checkmark);
       }
     }
+// Check if today's exercises are completed
+const exerciseDoc = await db.collection("users").doc(uid)
+  .collection("exerciseCompletions").doc(today).get();
+
+if (exerciseDoc.exists) {
+  const exerciseCheckContainer = document.querySelector('a[href="video-bank.html"] .checkbox-container');
+  if (exerciseCheckContainer && exerciseCheckContainer.children.length === 0) {
+    const checkmark = document.createElement("img");
+    checkmark.src = "images/checkmark.png"; // path to your checkmark icon
+    checkmark.alt = "Completed";
+    exerciseCheckContainer.appendChild(checkmark);
+  }
+}
+
+
   } catch (err) {
     console.error("Failed to load dashboard info:", err);
   }
