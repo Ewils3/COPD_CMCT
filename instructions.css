@@ -93,3 +93,37 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
+  /*new*/
+  #webgl-log-output {
+  margin-top: 30px;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: monospace;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#webgl-log-output div {
+  padding: 4px 0;
+}
+
+#webgl-log-output .log-error {
+  color: red;
+}
+
+#webgl-log-output .log-warn {
+  color: orange;
+}
+
+#webgl-log-output .log-log {
+  color: black;
+}
+
+#webgl-log-output .log-info {
+  color: #0077cc;
+}
+
+#webgl-log-output .log-debug {
+  color: #666;
+}
