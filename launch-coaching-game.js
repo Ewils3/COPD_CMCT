@@ -19,7 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Listen for messages from the coaching game
   window.addEventListener('message', function(event) {
-    // You can optionally check event.origin here for safety
+    // debug line
+    console.log('📩 Received message from game:', event.data);
+
     if (event.data?.type?.startsWith('console-')) {
       const level = event.data.type.replace('console-', '');
       const output = `[WebGL] ${event.data.data.join(' ')}`;
